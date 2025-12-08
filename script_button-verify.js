@@ -1,17 +1,6 @@
 let solution = null;
-
         // Set your secret passkey here
         const PASSKEY = "OPEN123";
-
-       function checkRecaptcha() {
-    const response = grecaptcha.getResponse();
-    if (response.length === 0) {
-        alert("Please complete the reCAPTCHA!");
-    } else {
-        alert("reCAPTCHA verified!");
-        enableButton();
-    }
-}
 
         // Check passkey input (case-sensitive)
         function checkPasskey() {
@@ -20,7 +9,7 @@ let solution = null;
                 alert("Passkey accepted! Access granted.");
                 enableButton();
             } else {
-                alert("nein!");
+                alert("Password accepted");
                 
             }
         }

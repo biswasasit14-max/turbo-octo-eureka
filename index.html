@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> CAPTCHA </title>
+    <title> Gateway: </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles_button.css">
@@ -39,7 +39,6 @@
         text-decoration: inherit; }
         .divider { margin: 12px 0; border-top: 1px solid #ccc; }
     </style>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <h1> Gateway: To Website_ </h1>
@@ -51,24 +50,12 @@
 
     <!-- Custom CAPTCHA + Passkey -->
     <div id="captchaBox">
-        <div id="captchaText"></div>
-
-        <input type="text" id="captchaInput" placeholder="Enter solution (e.g., 5)">
-        <button class="btn" id="captchaVerifyBtn" onclick="checkCaptcha()">Verify</button>
-
-        <div class="divider"></div>
-
         <input type="password" id="passkeyInput" placeholder="Enter Passkey">
         <button class="btn" id="passkeyBtn" onclick="checkPasskey()">Use Passkey</button>
-
-        <div class="divider"></div>
-
-        <!-- Google reCAPTCHA widget -->
-        <div class="g-recaptcha" data-sitekey="6LeW2SQsAAAAAFiWy2hCxf3423xuWMtpV73KET4q"></div>
-        <button class="btn" onclick="checkRecaptcha()">Verify reCAPTCHA</button>
+        
     </div>
 
-    <p> Solve the math CAPTCHA, enter the passkey, or verify reCAPTCHA to enable the button. </p>
+    <p> Enter the passkey. </p>
 
     <footer>
         <p>&copy; 2024 Made by The Rope Garage. Co. All rights reserved. </p>
