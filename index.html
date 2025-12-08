@@ -41,26 +41,23 @@
     </style>
 </head>
 <body>
-    <h1> Gateway: To Website_ </h1>
+    <h1>Gateway: To Website_</h1>
 
-    <!-- Button initially disabled -->
-    <button id="myButton" type="button" disabled onclick="window.location.href='https://example.com';">
-        Open Link
-    </button>
+  <!-- Passkey input -->
+  <input type="password" id="passkeyInput" placeholder="Enter Passkey">
+  <button class="btn" id="passkeyBtn" onclick="checkPasskey()">Use Passkey</button>
 
-    <!-- Custom CAPTCHA + Passkey -->
-    <div id="captchaBox">
-        <input type="password" id="passkeyInput" placeholder="Enter Passkey">
-        <button class="btn" id="passkeyBtn" onclick="checkPasskey()">Use Passkey</button>
-        
-    </div>
+  <!-- Open Link button (disabled until passkey is correct) -->
+  <button id="myButton" type="button" disabled onclick="window.location.href='Home.html';">
+    Open Link
+  </button>
 
-    <p> Enter the passkey. </p>
+  <footer>
+    <p>© 2024 Made by The Rope Garage. Co. All rights reserved.</p>
+  </footer>
 
-    <footer>
-        <p>&copy; 2024 Made by The Rope Garage. Co. All rights reserved. </p>
-    </footer>
-    <script src="script_button-verify.js"></script>
-    <script src="script_Button.js"></script>
+  <!-- Scripts -->
+  <script src="script_button-verify.js"></script>
+  <script src="script_Button.js"></script>
 </body>
 </html>
