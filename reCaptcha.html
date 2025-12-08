@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reCaptcha.css">
+    </head>
+    <body>
+        <header>
+            <h1> reCAPTCHA </h1>
+        </header>
+        <main>
+            <p>This is a simple CAPTCHA implementation using HTML, CSS, and JavaScript.</p>
+        <form>
+            <input type="text" id="captchaDisplay" readonly />
+            <button onclick="generateCaptcha()">Refresh</button>
+            <br> <input type="text" id="captchaInput" placeholder="Enter CAPTCHA" />
+            <button onclick="validateCaptcha()">Submit</button>
+            <p id="captchaStatus"></p>
+        </form>
+        <script>
+            let currentCaptcha = '';
+
+            function generateCaptcha() {
+                const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                let captcha = '';
+                for (let i = 0; i < 6; i++) {
+                    captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+                }
+                currentCaptcha = captcha;
+                document.getElementById('captchaDisplay').value = captcha;
+                document.getElementById('captchaStatus').innerText = '';
+                return false; // Prevent form submission
+            }
+
+            function validateCaptcha() {
+                const userInput = document.getElementById('captchaInput').value;
+                if (userInput === currentCaptcha) {
+                    document.getElementById('captchaStatus').innerText = 'CAPTCHA validated successfully!';
+                    window.location.href = 'index.html';
+                } 
+                else {
+                    document.getElementById('captchaStatus').innerText = 'Incorrect CAPTCHA. Please try again.';
+                }
+                return false; // Prevent form submission
+            }
+
+            // Generate initial CAPTCHA on page load
+            window.onload = generateCaptcha;
+        </script>
+        </main>
+        <footer>
+            <p>&copy; 2007 reCAPTCHA </p>
+        </footer>
+    </body>
+</html>

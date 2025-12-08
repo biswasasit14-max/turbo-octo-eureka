@@ -1,0 +1,52 @@
+body {
+    background-color: bisque;
+    color:antiquewhite
+}
+header {
+    background-color: brown;
+    color: antiquewhite;
+    text-align: center;
+    padding: 10px;
+}
+h1 {
+    font-family: 'Arial', sans-serif;
+}
+nav {
+    background-color: sienna;
+    padding: 10px;
+}
+nav a {
+    color: antiquewhite;
+    margin: 0 10px;
+    text-decoration: none;
+}
+main {
+    padding: 20px;
+}
+footer {
+    background-color: brown;
+    color: antiquewhite;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+button {
+    background-color: sienna;
+    color: antiquewhite;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: brown;
+}
+input[type="text"], input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
