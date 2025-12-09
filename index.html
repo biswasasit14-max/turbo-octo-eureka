@@ -75,27 +75,5 @@
       alert("grecaptcha is ready!");
      };
    </script>
-   <script>
-   function onCaptchaSuccess(token) {
-     // Send token to backend for verification
-     fetch("verify_captcha.php", {
-         method: "POST",
-         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-         body: "g-recaptcha-response=" + token
-    })
-    .then(response => response.text())
-    .then(data => {
-        if (data === "success") {
-            const secureBtn = document.getElementById("secureButton");
-            secureBtn.disabled = false;
-            secureBtn.innerText = "Access Granted ✅";
-        } else {
-            alert("CAPTCHA verification failed. Try again.");
-            grecaptcha.reset(); // reset widget
-        }
-    })
-    .catch(err => console.error("Error verifying CAPTCHA:", err));
-}
-    </script>
 </body>
 </html>
