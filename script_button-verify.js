@@ -27,7 +27,7 @@ function onCaptchaSuccess(token) {
     .then(response => response.text())
     .then(data => {
         if (data === "success") {
-            const secureBtn = document.getElementById("myButton");
+            const secureBtn = document.getElementById("secureButton");
             secureBtn.disabled = false;
             secureBtn.innerText = "Access Granted ✅";
         } else {

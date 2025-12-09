@@ -39,6 +39,12 @@
         .btn:hover { background: #45a049;
         text-decoration: inherit; }
         .divider { margin: 12px 0; border-top: 1px solid #ccc; }
+        .container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 2em;
+        }
     </style>
    
 </head>
@@ -57,13 +63,21 @@
   <!-- CAPTCHA widget -->
 <div class="g-recaptcha" 
      data-sitekey="6Ld9AiYsAAAAAI65mVW35BlEipGExnGNf5_yDcQp" 
-     data-callback="onCaptchaSuccess">
+     data-callback="onCaptchaSuccess"
+     >
 </div>
-
+<div class="container">
 <!-- Protected button -->
-<button id="secureButton" disabled>Solve CAPTCHA to continue</button>
+<button id="secureButton" disabled> Not working, do not click. Type the passkey "OPEN", all caps.
+</button>
+</div>
+<strong> 
+  <br> Do not solve CAPTCHA to continue.
+  <br> The backend server (at the moment: .php), 
+  <br>which isn't supported by Netlify 
+</strong>
   <footer>
-    <p>© 2024 Made by The Rope Garage. Co. All rights reserved.</p>
+    <p>© 2025 Made by The Rope Garage. Co. All rights reserved.</p>
   </footer>
 
   <!-- Scripts -->
@@ -71,9 +85,10 @@
   <script src="script_Button.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="text/javascript">
-      var onloadCallback = function() {
+      var onloadCallback = function() 
+      {
       alert("grecaptcha is ready!");
-     };
+      };
    </script>
 </body>
 </html>

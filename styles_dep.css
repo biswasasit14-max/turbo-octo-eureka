@@ -10,6 +10,7 @@ header {
     color: white;
     padding: 4px 0;
     text-align: center;
+    position: fixed;
 }
 
 footer {
@@ -28,6 +29,7 @@ main {
 
 hr {
     border-color: bisque;
+    position: fixed;
 }
 
 img {

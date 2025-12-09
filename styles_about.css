@@ -9,6 +9,7 @@ header {
         color: white;
         padding: 3.5px 0;
         text-align: center;
+        position: fixed;
         }
         footer {
         background-color: #333;
@@ -24,6 +25,7 @@ header {
         }
         hr {
             border-color:bisque;
+            position: fixed;
         }
         img {
             border: 4.5px solid #e6e47b;
