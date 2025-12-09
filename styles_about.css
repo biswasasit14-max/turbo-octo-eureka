@@ -6,10 +6,10 @@ body {
 }
 header {
         background-color: #e6e47b;
-        color: white;
+        color: rgb(255, 255, 255);
         padding: 3.5px 0;
         text-align: center;
-        position: fixed;
+        max-width: 100%;
         }
         footer {
         background-color: #333;
