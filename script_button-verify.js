@@ -17,18 +17,4 @@ let solution = null;
     alert("Invalid passkey. Try again.");
   }
 }
-      
-    .then(response => response.text())
-    .then(data => {
-        if (data === "success") {
-            const secureBtn = document.getElementById("secureButton");
-            secureBtn.disabled = false;
-            secureBtn.innerText = "Access Granted ✅";
-        } else {
-            alert("CAPTCHA verification failed. Try again.");
-            grecaptcha.reset(); // reset widget
-        }
-    })
-    .catch(err => console.error("Error verifying CAPTCHA:", err));
-}
 
