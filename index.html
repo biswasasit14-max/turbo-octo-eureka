@@ -75,5 +75,14 @@
       alert("grecaptcha is ready!");
      };
    </script>
+   <script>
+   function onCaptchaSuccess(token) {
+     // Send token to backend for verification
+     fetch("verify_captcha.php", {
+         method: "POST",
+         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+         body: "g-recaptcha-response=" + token
+    })
+    </script>
 </body>
 </html>

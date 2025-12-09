@@ -17,13 +17,7 @@ let solution = null;
     alert("Invalid passkey. Try again.");
   }
 }
-      function onCaptchaSuccess(token) {
-    // Send token to backend for verification
-    fetch("verify_captcha.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: "g-recaptcha-response=" + token
-    })
+      
     .then(response => response.text())
     .then(data => {
         if (data === "success") {
